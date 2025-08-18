@@ -88,7 +88,7 @@ goto menu
 set /p dom=Domain (example.com): 
 if defined dom (
     echo %ESC%[38;2;0;255;200mWhois lookup for %dom%...%ESC%[0m
-    for /f "delims=" %%i in ('curl "https://who-dat.as93.net/api/v1/whois?identifier=%dom%"') do (
+    for /f "delims=" %%i in ('curl -s https://who-dat.as93.net/%%dom%%') do (
         echo %ESC%[38;2;0;255;255m%%i%ESC%[0m
     )
 )
@@ -151,6 +151,7 @@ goto :eof
 
 :end
 exit
+
 
 
 

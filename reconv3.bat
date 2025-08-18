@@ -41,6 +41,8 @@ for /f "delims=" %%i in ('netstat -an ^| findstr "LISTENING"') do (
     echo %ESC%[38;2;0;120;255m%%i%ESC%[0m
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :locate
@@ -52,6 +54,8 @@ if defined ip (
     )
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :trace
@@ -63,6 +67,8 @@ if defined ip (
     )
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :ping
@@ -74,6 +80,8 @@ if defined ip (
     )
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :whois
@@ -85,6 +93,8 @@ if defined dom (
     )
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :openport
@@ -102,6 +112,8 @@ if defined ip (
     )
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :dns
@@ -113,6 +125,8 @@ if defined domain (
     )
 )
 pause >nul
+cls
+call :banner
 goto menu
 
 :speedtest
@@ -120,6 +134,8 @@ echo %ESC%[38;2;255;150;0mRunning speedtest...%ESC%[0m
 cd C:\Users\%USERNAME%\Downloads\ookla-speedtest-1.2.0-win64
 speedtest.exe
 pause >nul
+cls
+call :banner
 goto menu
 
 :banner
@@ -135,4 +151,5 @@ goto :eof
 
 :end
 exit
+
 

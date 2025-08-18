@@ -4,3 +4,4 @@
 
 
 **reconV2.bat works fine on windows 11**
+(chcp problems, requires additional settings must be configured)

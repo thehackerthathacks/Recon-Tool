@@ -3,9 +3,6 @@ setlocal enabledelayedexpansion
 color 09
 title RECON
 
-:: Pause at start to catch errors
-pause
-
 call :banner
 
 :menu
@@ -95,9 +92,9 @@ goto menu
 
 :banner
 echo.
-echo   ===============================
-echo           RECON TOOL
-echo   ===============================
+echo                                          ===============================
+echo                                                    RECON TOOL
+echo                                          ===============================
 echo.
 goto :eof
 

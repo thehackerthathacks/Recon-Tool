@@ -117,7 +117,7 @@ goto menu
 
 :speedtest
 echo %ESC%[38;2;255;150;0mRunning speedtest...%ESC%[0m
-cd C:\Users\Admin\Downloads\speedtest
+cd C:\Users\%USERNAME%\Downloads\ookla-speedtest-1.2.0-win64
 speedtest.exe
 pause >nul
 goto menu
@@ -135,3 +135,4 @@ goto :eof
 
 :end
 exit
+

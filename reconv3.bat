@@ -81,7 +81,9 @@ goto menu
 
 :speedtest
 echo Running speedtest (requires Ookla speedtest CLI)...
-speedtest
+:: Put your speedtest cli's folder destination
+cd C:\Users\%USERNAME%\Downloads\ookla-speedtest-1.2.0-win64
+speedtest.exe
 pause >nul
 goto menu
 
@@ -98,3 +100,4 @@ goto :eof
 
 :end
 exit
+

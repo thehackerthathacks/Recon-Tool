@@ -99,7 +99,9 @@ goto menu
 
 :openport
 set /p ip=IP: 
+echo.
 echo This might take a while!
+echo.
 if defined ip (
     echo %ESC%[38;2;0;200;0mScanning common ports on %ip%...%ESC%[0m
     for %%p in (21 22 23 25 53 80 110 143 443 445 3389 5500 7070 8080) do (
@@ -152,5 +154,6 @@ goto :eof
 
 :end
 exit
+
 
 
